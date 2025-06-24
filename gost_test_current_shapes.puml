@@ -1,0 +1,34 @@
+@startgost
+title Current GOST Implementation - Shape Issues Demonstration
+
+start
+note right
+  Should be stadium/oval shape
+  Currently shows as circle
+end note
+
+:Initialize system;
+note right
+  Should be rectangle
+  Currently rounded rectangle  
+end note
+
+:Read input data;
+
+if (Data valid?) then (yes)
+  note right: Diamond shape is correct for GOST
+  :Process data;
+  :Calculate results;
+else (no)
+  :Show error message;
+endif
+
+:Output results;
+
+stop
+note right
+  Should be stadium/oval shape
+  Currently shows as circle
+end note
+
+@endgost

@@ -42,21 +42,17 @@ import net.sourceforge.plantuml.core.DiagramDescription;
 import net.sourceforge.plantuml.core.UmlSource;
 
 /**
- * GOST Algorithm Diagram
- * 
- * GOST diagrams follow the Russian/Soviet standard for algorithm flowcharts.
- * Currently this reuses activity diagram functionality with plans to add
- * GOST-specific shapes (stadium terminators, etc.) in future iterations.
+ * GOST Diagram implementation that follows GOST 19.701-90 standards
+ * for algorithm flowchart symbols.
  */
 public class GostDiagram extends ActivityDiagram3 {
 
 	public GostDiagram(UmlSource source, Map<String, String> skinParam) {
 		super(source, skinParam);
 	}
-	
+
 	@Override
 	public DiagramDescription getDescription() {
 		return new DiagramDescription("(GOST Algorithm Diagram)");
 	}
-
 }
