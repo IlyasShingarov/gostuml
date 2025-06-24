@@ -45,9 +45,8 @@ import net.sourceforge.plantuml.core.UmlSource;
  * GOST Algorithm Diagram
  * 
  * GOST diagrams follow the Russian/Soviet standard for algorithm flowcharts.
- * The main difference from regular activity diagrams is that terminators 
- * (start/end elements) use rectangles with rounded corners forming a 
- * stadium/capsule shape.
+ * Currently this reuses activity diagram functionality with plans to add
+ * GOST-specific shapes (stadium terminators, etc.) in future iterations.
  */
 public class GostDiagram extends ActivityDiagram3 {
 
