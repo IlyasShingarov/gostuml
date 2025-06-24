@@ -1,0 +1,87 @@
+@startgost
+title GOST Algorithm Flowchart - Comprehensive Example
+
+start
+
+:Initialize system variables;
+note right: Set up logging and error handling
+
+:Load configuration file;
+
+if (Configuration exists?) then (yes)
+  :Parse configuration;
+  
+  if (Config valid?) then (yes)
+    :Apply settings;
+    
+    partition "Data Processing Module" {
+      :Open data source;
+      
+      while (More records available?) is (yes)
+        :Read next record;
+        
+        if (Record format valid?) then (yes)
+          :Parse record data;
+          
+          switch (Record type?)
+          case (Customer)
+            :Process customer data;
+            :Update customer database;
+          case (Order)
+            :Process order data;
+            :Calculate totals;
+            :Update inventory;
+          case (Payment)
+            :Process payment;
+            :Update accounts;
+          case (default)
+            :Log unknown record type;
+            :Move to error queue;
+          endswitch
+          
+          :Increment processed count;
+          
+        else (no)
+          :Log format error;
+          :Add to error report;
+        endif
+        
+      endwhile (no)
+      
+      :Close data source;
+    }
+    
+    :Generate processing report;
+    
+    if (Errors occurred?) then (yes)
+      :Create error summary;
+      
+      fork
+        :Email error report;
+      fork again
+        :Save to error log;
+      fork again
+        :Update dashboard;
+      end fork
+      
+    endif
+    
+    :Archive processed files;
+    :Update system status;
+    
+  else (no)
+    :Log configuration error;
+    :Use default settings;
+  endif
+  
+else (no)
+  :Create default configuration;
+  :Log warning message;
+endif
+
+:Cleanup temporary files;
+:Release system resources;
+
+stop
+
+@endgost

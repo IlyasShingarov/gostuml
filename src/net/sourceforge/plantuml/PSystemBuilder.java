@@ -77,6 +77,7 @@ import net.sourceforge.plantuml.filesdiagram.FilesDiagramFactory;
 import net.sourceforge.plantuml.flowdiagram.FlowDiagramFactory;
 import net.sourceforge.plantuml.font.PSystemListFontsFactory;
 import net.sourceforge.plantuml.gitlog.GitDiagramFactory;
+import net.sourceforge.plantuml.gostdiagram.GostDiagramFactory;
 import net.sourceforge.plantuml.hcl.HclDiagramFactory;
 import net.sourceforge.plantuml.help.HelpFactory;
 import net.sourceforge.plantuml.jcckit.PSystemJcckitFactory;
@@ -280,6 +281,7 @@ public class PSystemBuilder {
 		factories.add(new PSystemRegexFactory());
 
 		factories.add(new ChenEerDiagramFactory());
+		factories.add(new GostDiagramFactory());
 	}
 
 	private boolean isOk(Diagram ps) {

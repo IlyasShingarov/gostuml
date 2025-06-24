@@ -1,0 +1,73 @@
+@startgost
+title GOST Algorithm Flowchart - Complete Sample
+subtitle Demonstrating all GOST diagram elements
+
+start
+
+:Initialize system;
+note right: GOST standard initialization
+
+:Read configuration file;
+
+if (Configuration valid?) then (yes)
+  :Load parameters;
+  
+  partition "Main Processing" {
+    :Start data processing;
+    
+    while (Has more data?) is (yes)
+      :Read next record;
+      
+      if (Record valid?) then (yes)
+        :Process record;
+        
+        switch (Record type?)
+        case ( Type A )
+          :Apply algorithm A;
+        case ( Type B )  
+          :Apply algorithm B;
+        case ( Type C )
+          :Apply algorithm C;
+        case ( default )
+          :Log unknown type;
+        endswitch
+        
+        :Update statistics;
+      else (no)
+        :Log error;
+        :Skip record;
+      endif
+      
+    endwhile (no)
+  }
+  
+  :Generate report;
+  
+  fork
+    :Save to database;
+  fork again
+    :Send notification;
+  fork again  
+    :Archive data;
+  end fork
+  
+  :Display results;
+  
+else (no)
+  :Display error message;
+  :Exit with error code;
+  
+  split
+    :Log to file;
+  split again
+    :Send alert;
+  end split
+  
+endif
+
+:Clean up resources;
+note left: Release memory and close files
+
+stop
+
+@endgost

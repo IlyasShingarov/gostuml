@@ -1,0 +1,18 @@
+@startgost
+start
+
+:Initialize variables;
+:Read input data;
+
+if (Input valid?) then (yes)
+  :Process data;
+  :Calculate result;
+  :Output result;
+else (no)
+  :Display error;
+endif
+
+:Clean up;
+stop
+
+@endgost

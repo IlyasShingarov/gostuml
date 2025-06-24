@@ -1,0 +1,44 @@
+@startgost
+title GOST Algorithm Diagram - Full Demonstration
+
+start
+
+:Initialize system;
+
+:Read configuration;
+
+if (Config valid?) then (yes)
+  :Load settings;
+  
+  while (Has more data?) is (yes)
+    :Read next item;
+    
+    if (Item valid?) then (yes)
+      :Process item;
+      
+      switch (Item type?)
+      case (Type A)
+        :Handle Type A;
+      case (Type B)
+        :Handle Type B;
+      case (default)
+        :Log unknown type;
+      endswitch
+      
+    else (no)
+      :Log error;
+    endif
+    
+  endwhile (no)
+  
+  :Generate report;
+  
+else (no)
+  :Show error message;
+endif
+
+:Cleanup resources;
+
+stop
+
+@endgost

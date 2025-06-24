@@ -1,0 +1,9 @@
+@startgost
+
+start
+:Read input;
+:Process data;
+:Write output;
+stop
+
+@endgost

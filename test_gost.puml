@@ -1,0 +1,24 @@
+@startgost
+title GOST Algorithm Diagram Sample
+
+start
+
+:Initialize variables;
+:Read input data;
+
+if (Input valid?) then (yes)
+  :Process data;
+  :Calculate result;
+  while (More iterations?) is (yes)
+    :Perform calculation;
+    :Update values;
+  endwhile (no)
+  :Output result;
+else (no)
+  :Display error message;
+endif
+
+:Clean up resources;
+stop
+
+@endgost
