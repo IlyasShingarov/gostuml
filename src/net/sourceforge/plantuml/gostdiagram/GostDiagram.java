@@ -43,7 +43,7 @@ import net.sourceforge.plantuml.core.UmlSource;
 
 /**
  * GOST Diagram implementation that follows GOST 19.701-90 standards
- * for algorithm flowchart symbols.
+ * for algorithm flowchart symbols, using stadium-shaped terminators.
  */
 public class GostDiagram extends ActivityDiagram3 {
 

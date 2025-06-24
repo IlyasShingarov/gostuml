@@ -1,0 +1,17 @@
+@startuml
+title GOST Terminator Shape Demo
+
+note as N1
+This shows what GOST 19.701-90 terminators should look like:
+- Start/End should be stadium/oval shapes (not circles)
+end note
+
+rectangle "Current @startgost (Wrong)" {
+  (Start) --> [Process] --> (End)
+}
+
+rectangle "Proper GOST Stadium Shapes" {
+  [START] --> [Action] --> [STOP]
+}
+
+@enduml

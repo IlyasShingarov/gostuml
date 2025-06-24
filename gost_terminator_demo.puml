@@ -1,0 +1,28 @@
+@startuml
+title GOST 19.701-90 Terminator Shape Demonstration
+
+rectangle "Current @startgost Implementation" as current {
+  (START) --> [Process Data] --> (END)
+  note bottom: Currently uses circles\n(Activity diagram style)
+}
+
+rectangle "Proper GOST 19.701-90 Standard" as proper {
+  component "START" as start #lightgreen
+  rectangle "Process Data" as process
+  component "END" as end #lightcoral
+  
+  start --> process
+  process --> end
+  
+  note bottom: Should use stadium/oval shapes\n(Rectangles with rounded ends)
+}
+
+note as legend
+**GOST 19.701-90 Algorithm Flowchart Standards:**
+• START/END: Stadium/oval shapes (not circles)
+• PROCESS: Rectangles 
+• DECISION: Diamonds
+• INPUT/OUTPUT: Parallelograms
+end note
+
+@enduml

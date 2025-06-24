@@ -1,0 +1,70 @@
+@startgost
+title GOST Algorithm Example 3 - Comprehensive Data Processing System
+
+start
+
+:Initialize logging system;
+note right: GOST diagram supporting\nall activity features
+
+partition "Configuration Phase" {
+  :Load configuration file;
+  
+  if (Config file exists?) then (yes)
+    :Parse configuration;
+    if (Config valid?) then (yes)
+      :Apply settings;
+    else (no)
+      :Use default settings;
+      :Log warning;
+    endif
+  else (no)
+    :Create default config;
+    :Save to file;
+  endif
+}
+
+partition "Main Processing Loop" {
+  :Open data source;
+  
+  while (More data available?) is (yes)
+    :Read next record;
+    
+    if (Record format valid?) then (yes)
+      switch (Record priority?)
+      case (High)
+        :Process immediately;
+        :Send notification;
+      case (Medium)
+        :Add to queue;
+        :Process in batch;
+      case (Low)
+        :Add to background queue;
+      case (default)
+        :Log unknown priority;
+      endswitch
+      
+      :Update progress counter;
+    else (no)
+      :Log invalid record;
+      :Increment error count;
+    endif
+  endwhile (no)
+}
+
+partition "Cleanup and Reporting" {
+  :Close data source;
+  :Generate processing report;
+  
+  if (Errors occurred?) then (yes)
+    :Generate error report;
+    :Send alert email;
+  endif
+  
+  :Archive processed data;
+  :Update statistics;
+}
+
+:Shutdown system;
+stop
+
+@endgost

@@ -1,0 +1,20 @@
+@startgost
+title GOST Algorithm Example 1 - Basic Flow
+
+start
+
+:Initialize variables;
+:Read input data;
+
+if (Input valid?) then (yes)
+  :Process data;
+  :Calculate result;
+  :Display output;
+else (no)
+  :Show error message;
+endif
+
+:Clean up;
+stop
+
+@endgost

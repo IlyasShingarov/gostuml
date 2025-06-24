@@ -1,0 +1,16 @@
+@startuml
+title GOST Implementation - Current vs Required Shapes
+
+note as current
+**Current @startgost output:**
+Uses activity diagram circles for START/END
+end note
+
+note as required  
+**GOST 19.701-90 requires:**
+Stadium/oval shapes for START/END terminators
+end note
+
+current --> required : Need to implement
+
+@enduml

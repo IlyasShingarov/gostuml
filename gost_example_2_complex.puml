@@ -1,0 +1,35 @@
+@startgost
+title GOST Algorithm Example 2 - Complex Processing
+
+start
+
+:Initialize system;
+:Set counter = 0;
+
+while (counter < max_iterations?) is (yes)
+  :Read next item;
+  
+  switch (Item type?)
+  case (Type A)
+    :Process as Type A;
+    :Update statistics A;
+  case (Type B)  
+    :Process as Type B;
+    :Update statistics B;
+  case (Type C)
+    :Process as Type C;
+    :Update statistics C;
+  case (default)
+    :Log unknown type;
+    :Increment error count;
+  endswitch
+  
+  :Increment counter;
+endwhile (no)
+
+:Generate final report;
+:Save results;
+
+stop
+
+@endgost
